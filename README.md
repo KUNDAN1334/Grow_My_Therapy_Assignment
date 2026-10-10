@@ -36,10 +36,24 @@ e.g. `"Who we *help*"`.
 
 ## Fonts
 
-The original uses Muli, Beaufort Pro and a paid script font. Muli is on Google Fonts as
-**Mulish**; for the other two I used the closest free matches (**Newsreader** Light and
-**Mrs Saint Delafield**). The font files are kept in `src/fonts` and loaded with
-`next/font/local`, so the build never has to download anything.
+The original uses Muli, Beaufort Pro and a paid script font (Printed Moments).
+Muli is on Google Fonts as **Mulish**. For the paid ones I compared ~20 free fonts
+against the original and picked the closest:
+
+- **Newsreader** Light for headings: almost the same letter widths as Beaufort Pro.
+  With slightly tighter letter-spacing every heading breaks onto the same lines as
+  the original.
+- **Allison** for the script accent words: a thin, signature-style hand.
+
+The font files live in `src/fonts` and load with `next/font/local`, so the build
+never has to download anything.
+
+## Measured, not eyeballed
+
+Every size and gap was measured on the original at 390px, 1440px and 1920px wide.
+The original's text and photos keep growing on wide screens, so desktop values are
+written as `a + b·vw` (for example `calc(219px+25.6vw)`), which matches the
+original at both 1440px and 1920px and scales smoothly in between.
 
 ## Run locally
 

@@ -148,13 +148,13 @@ export const cloneContent: SiteContent = {
         link: { label: "Learn More", href: "#" },
       },
       {
-        title: "EMDR",
-        text: "Eye Movement Desensitization and Reprocessing (EMDR) is a powerful therapeutic technique that helps process and heal trauma by reworking how painful memories are stored in your brain. This allows you to find relief and move toward lasting healing.",
+        title: "Dissociation",
+        text: "The feeling of losing time, hearing conflicting voices, or questioning your sense of self can be overwhelming. In therapy, we’ll help you understand these experiences, recognize your own triggers, and create a sense of balance and identity so that you can feel more grounded.",
         link: { label: "Learn More", href: "#" },
       },
       {
-        title: "Dissociation",
-        text: "The feeling of losing time, hearing conflicting voices, or questioning your sense of self can be overwhelming. In therapy, we’ll help you understand these experiences, recognize your own triggers, and create a sense of balance and identity so that you can feel more grounded.",
+        title: "EMDR",
+        text: "Eye Movement Desensitization and Reprocessing (EMDR) is a powerful therapeutic technique that helps process and heal trauma by reworking how painful memories are stored in your brain. This allows you to find relief and move toward lasting healing.",
         link: { label: "Learn More", href: "#" },
       },
       {

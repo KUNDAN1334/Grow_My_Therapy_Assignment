@@ -11,20 +11,21 @@ export function Header({ brand, nav, navCta }: Props) {
 
   return (
     <header className="relative z-20 bg-surface">
-      <div className="flex items-center justify-between px-6 py-5 md:py-6 md:pr-[5vw] md:pl-[6.1vw]">
-        <Logo name={brand.name} tagline={brand.tagline} />
+      {/* the original logo image has ~16px of empty space on its left, hence the "+16px" */}
+      <div className="flex items-center justify-between py-8 pr-[6vw] pl-[calc(6vw+16px)] md:py-[calc(8px+1.46vw)] md:pr-[5vw] md:pl-[calc(5vw+16px)]">
+        <Logo name={brand.name} tagline={brand.tagline} size="header" />
 
         {/* Desktop navigation */}
-        <nav className="hidden items-center gap-9 lg:flex">
+        <nav className="hidden items-center gap-[2.5vw] lg:flex">
           {nav.map((item) => (
             <div key={item.label} className="group relative">
-              <a href={item.href} className="text-[0.83rem] uppercase tracking-[0.1em] hover:opacity-60">
+              <a href={item.href} className="text-nav font-normal uppercase tracking-[0.1em] hover:opacity-60">
                 {item.label}
               </a>
               {item.children && (
                 <div className="invisible absolute top-full left-1/2 w-max -translate-x-1/2 bg-surface px-6 py-4 opacity-0 transition-opacity group-hover:visible group-hover:opacity-100">
                   {item.children.map((child) => (
-                    <a key={child.label} href={child.href} className="block py-1 text-[0.83rem] hover:opacity-60">
+                    <a key={child.label} href={child.href} className="text-nav block py-1 hover:opacity-60">
                       {child.label}
                     </a>
                   ))}

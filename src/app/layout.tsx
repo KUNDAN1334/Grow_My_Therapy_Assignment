@@ -2,14 +2,17 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-// Original site uses Muli (now "Mulish"), Beaufort Pro and a hand-lettered script.
-// Beaufort Pro and the script are paid fonts, so these are the closest free matches.
+// Original site uses Muli (now "Mulish"), Beaufort Pro and "Printed Moments" (script).
+// The last two are paid fonts, so these are the closest free matches:
+// Newsreader has almost the same letter widths as Beaufort Pro (so lines wrap the
+// same way once letter-spacing is tightened), and Allison is a thin signature-style
+// script like Printed Moments.
 // The files (Google Fonts, latin subset) live in src/fonts so the build never
 // depends on downloading them.
 const mulish = localFont({
   src: "../fonts/mulish-latin.woff2",
   variable: "--font-mulish",
-  weight: "300 400", // one variable file covers both weights
+  weight: "200 1000", // variable font, one file for every weight
 });
 
 const newsreader = localFont({
@@ -22,7 +25,7 @@ const newsreader = localFont({
 });
 
 const script = localFont({
-  src: "../fonts/mrs-saint-delafield-latin.woff2",
+  src: "../fonts/allison-latin.woff2",
   variable: "--font-script-face",
   weight: "400",
 });
