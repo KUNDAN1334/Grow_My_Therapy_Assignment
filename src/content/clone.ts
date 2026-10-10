@@ -2,9 +2,8 @@ import type { SiteContent } from "./types";
 
 // Part 1 — content copied from conejovalleycounseling.com/home, used only on /clone.
 
-// "?format=1500w" asks Squarespace for a resized copy instead of the multi-MB original.
-const cdn = (path: string) =>
-  `https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/${path}?format=1500w`;
+// Photos were downloaded from the original site into public/clone/.
+const photo = (file: string) => `/clone/${file}`;
 
 const team = [
   "Jennifer Anderson",
@@ -36,11 +35,11 @@ export const cloneContent: SiteContent = {
     text: "Specialized therapy for adults, couples, teens, and children to reflect, heal, and grow.",
     button: { label: "Book an Appointment", href: "#contact" },
     image: {
-      src: cdn("80513bd1-30ee-4a2d-aaf6-782d9be095ce/Jennifer+A+-+Images+%2866%29.jpg"),
+      src: photo("hero.jpg"),
       alt: "Family walking together on the beach",
     },
     sideImage: {
-      src: cdn("3643a7ac-ff62-4927-b96e-9e65ecff0521/Jennifer+A+-+Images+%2867%29.jpg"),
+      src: photo("hero-side.webp"),
       alt: "Ocean waves on the shore",
     },
   },
@@ -54,7 +53,7 @@ export const cloneContent: SiteContent = {
         "First and foremost, we believe what you’re going through is real, valid, and worthy of support. Our team offers clients in the Newbury Park area and across CA an environment to discover a new life and a deeper sense of self in the midst of their struggles. As we tap into the power of connection and understanding, you can find your footing again and take a transformative path forward.",
     },
     image: {
-      src: cdn("7a40691c-70a5-4307-b9ae-974592087a8f/Jennifer+A+-+Images+%283%29.jpg"),
+      src: photo("intro.webp"),
       alt: "Calm ocean meeting the sand",
     },
   },
@@ -66,7 +65,7 @@ export const cloneContent: SiteContent = {
         title: "Adults",
         text: "Feeling stuck or overwhelmed? We help adults find clarity, build resilience, and move forward with confidence by addressing the root causes of anxiety, stress, and emotional pain.",
         image: {
-          src: cdn("066f60e6-1354-4d47-a586-ab3f2f2ba612/Jennifer+A+-+Images+%288%29.jpg"),
+          src: photo("adults.jpg"),
           alt: "Two friends sitting by the water",
         },
       },
@@ -74,7 +73,7 @@ export const cloneContent: SiteContent = {
         title: "Couples",
         text: "Relationships require effort, and we’re here to help you strengthen yours. We guide couples through challenges like communication breakdowns and trust issues, helping you rebuild intimacy and strengthen your relationship.",
         image: {
-          src: cdn("d0157712-388c-4800-aada-c78db97ee966/Jennifer+A+-+Images+%289%29.jpg"),
+          src: photo("couples.webp"),
           alt: "Couple embracing on the beach",
         },
       },
@@ -82,7 +81,7 @@ export const cloneContent: SiteContent = {
         title: "Children & Teens",
         text: "Kids need support, too. We help them process big emotions, cope with challenging family situations, build coping skills, and feel understood, while also working closely with their parents to create a nurturing environment.",
         image: {
-          src: cdn("d5d62bf4-34a7-4bf4-bf00-e1169863ace7/Jennifer+A+-+Images+%2810%29.jpg"),
+          src: photo("children.webp"),
           alt: "Two children hugging at the shoreline",
         },
       },
@@ -93,7 +92,7 @@ export const cloneContent: SiteContent = {
     text: "You deserve a place where your story is heard, valued, and understood.",
     emphasis: "Nothing will be too heavy for us to carry together.",
     image: {
-      src: cdn("27b4f80c-ca73-4d1f-824e-ec29a2211142/Jennifer+A+-+Images+%282%29.png"),
+      src: photo("quote.webp"),
       alt: "",
     },
   },
@@ -127,7 +126,7 @@ export const cloneContent: SiteContent = {
     },
     button: { label: "Learn More About Us", href: "#" },
     image: {
-      src: cdn("389808ad-7273-4e03-a32b-c172aa735f12/Jennifer+A+-+Images+%286%29.jpg"),
+      src: photo("approach.webp"),
       alt: "Mother and daughter dancing on the sand",
     },
   },
@@ -135,7 +134,7 @@ export const cloneContent: SiteContent = {
   imageQuote: {
     title: "Honoring where you’ve been *&* helping shape where you’re headed.",
     image: {
-      src: cdn("6f1501bf-74a5-4c57-a957-8ce4c5876848/Jennifer+A+-+Images+%285%29.jpg"),
+      src: photo("image-quote.webp"),
       alt: "Family holding hands looking at the ocean",
     },
   },
@@ -176,11 +175,11 @@ export const cloneContent: SiteContent = {
     button: { label: "Book Now", href: "#contact" },
     images: [
       {
-        src: cdn("1b9495e0-ce39-4826-9df9-e24de99da82f/Jennifer+A+-+Images+%2812%29.jpg"),
+        src: photo("booking-left.webp"),
         alt: "Seashells on the sand",
       },
       {
-        src: cdn("7557312a-044d-4489-a9d1-6f43ee9888b1/Jennifer+A+-+Images+%2811%29.jpg"),
+        src: photo("booking-right.jpg"),
         alt: "Child drawing in the sand with a parent",
       },
     ],
