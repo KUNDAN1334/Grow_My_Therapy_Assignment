@@ -38,7 +38,8 @@ e.g. `"Who we *help*"`.
 
 The original uses Muli, Beaufort Pro and a paid script font. Muli is on Google Fonts as
 **Mulish**; for the other two I used the closest free matches (**Newsreader** Light and
-**Mrs Saint Delafield**), loaded with `next/font`.
+**Mrs Saint Delafield**). The font files are kept in `src/fonts` and loaded with
+`next/font/local`, so the build never has to download anything.
 
 ## Run locally
 
