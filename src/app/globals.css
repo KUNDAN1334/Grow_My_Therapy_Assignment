@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+  THEMES
+  A theme only sets raw colour values. Components never use hex codes directly —
+  they use the semantic Tailwind names below (bg-surface, text-ink, text-accent…).
+  To re-skin the whole site, add a new theme class and put it on the page wrapper.
+*/
+.theme-original {
+  --c-page: #ffffff; /* plain white sections */
+  --c-surface: #f6f4ee; /* cream: hero, intro, booking */
+  --c-surface-alt: #e3d9ca; /* sand: "how we work" */
+  --c-ink: #2b2b2b; /* text */
+  --c-accent: #86b3b3; /* script words, logo tagline, bottom bar */
+  --c-line: #dcdcdc; /* hairline dividers */
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-page: var(--c-page);
+  --color-surface: var(--c-surface);
+  --color-surface-alt: var(--c-surface-alt);
+  --color-ink: var(--c-ink);
+  --color-accent: var(--c-accent);
+  --color-line: var(--c-line);
+
+  --font-sans: var(--font-mulish);
+  --font-serif: var(--font-newsreader);
+  --font-script: var(--font-script-face);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/*
+  TYPE SCALE — measured from the original at 1440px and ~760px wide,
+  then turned into clamp() so it scales smoothly in between.
+*/
+@theme {
+  --text-display: clamp(2.25rem, 0.82rem + 3.26vw, 3.75rem);
+  --text-display--line-height: 1.25;
+  --text-h2: clamp(2rem, 0.86rem + 2.37vw, 3rem);
+  --text-h2--line-height: 1.3;
+  --text-h3: clamp(1.75rem, 0.875rem + 1.75vw, 2.45rem);
+  --text-h3--line-height: 1.32;
+  --text-h4: clamp(1.3rem, 0.9rem + 0.88vw, 1.7rem);
+  --text-h4--line-height: 1.36;
+  --text-body: clamp(0.95rem, 0.94rem + 0.12vw, 1.05rem);
+  --text-body--line-height: 1.8;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif font-light tracking-[-0.01em];
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Small uppercase label used above headings ("HOW WE WORK") and in lists. */
+@utility eyebrow {
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
