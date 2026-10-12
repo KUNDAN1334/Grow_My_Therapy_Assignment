@@ -15,6 +15,23 @@
   --c-line: #dcdcdc; /* hairline dividers */
 }
 
+/*
+  Redesign for Dr. Maya Reynolds — "Linen, Sage & Clay".
+  Pulled from her Santa Monica office: warm linen and wood, green plants, red brick.
+    primary   evergreen #2d3a32  text, dark photo tint
+    secondary linen     #f2ece3  + sage mist #dfe3d6  section backgrounds
+    accent    clay      #9a5a41  script words, logo tagline, bottom bar
+  Contrast (WCAG): evergreen on linen 10.1:1, white on clay 5.4:1.
+*/
+.theme-maya {
+  --c-page: #fbf8f3; /* warm white */
+  --c-surface: #f2ece3; /* linen */
+  --c-surface-alt: #dfe3d6; /* sage mist */
+  --c-ink: #2d3a32; /* evergreen */
+  --c-accent: #9a5a41; /* terracotta clay */
+  --c-line: #e3dcd1;
+}
+
 @theme inline {
   --color-page: var(--c-page);
   --color-surface: var(--c-surface);
