@@ -24,7 +24,7 @@
   --color-line: var(--c-line);
 
   --font-sans: var(--font-mulish);
-  --font-serif: var(--font-newsreader);
+  --font-serif: var(--font-heading-face);
   --font-script: var(--font-script-face);
 }
 
@@ -58,8 +58,8 @@
   h2,
   h3,
   h4 {
-    /* tighter than usual: makes Newsreader about as wide as Beaufort Pro, so lines wrap like the original */
-    @apply font-serif font-light tracking-[-0.03em];
+    /* tighter than usual: makes Taviraj about as wide as Beaufort Pro, so lines wrap like the original */
+    @apply font-serif font-extralight tracking-[-0.035em];
   }
 }
 

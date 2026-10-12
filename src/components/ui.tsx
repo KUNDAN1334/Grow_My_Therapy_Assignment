@@ -4,13 +4,12 @@ import type { Link } from "@/content/types";
 
 /**
  * Renders a heading string where *word* is shown in the script accent font.
- * The script font is drawn much smaller than the serif, so it is scaled up, and
- * line-height 0 stops the big letters from pushing the heading's lines apart.
+ * line-height 0 stops the script's tall loops from pushing the heading's lines apart.
  */
 export function ScriptText({ text }: { text: string }) {
   return text.split(/\*(.+?)\*/).map((part, i) =>
     i % 2 === 1 ? (
-      <span key={i} className="font-script text-accent text-[2.2em] leading-[0] tracking-normal">
+      <span key={i} className="font-script text-accent text-[1.1em] leading-[0] tracking-normal">
         {part}
       </span>
     ) : (
@@ -55,8 +54,8 @@ const logoSizes = {
 export function Logo({ name, tagline, size }: { name: string; tagline: string; size: keyof typeof logoSizes }) {
   return (
     <a href="#" className="inline-block leading-none">
-      <span className={`block font-serif font-light ${logoSizes[size].name}`}>{name}</span>
-      <span className={`mt-[0.4em] block font-semibold uppercase tracking-[0.6em] text-accent ${logoSizes[size].tagline}`}>
+      <span className={`block font-serif font-extralight ${logoSizes[size].name}`}>{name}</span>
+      <span className={`mt-[0.4em] block font-bold uppercase tracking-[0.6em] text-accent ${logoSizes[size].tagline}`}>
         {tagline}
       </span>
     </a>

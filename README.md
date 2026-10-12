@@ -36,14 +36,19 @@ e.g. `"Who we *help*"`.
 
 ## Fonts
 
-The original uses Muli, Beaufort Pro and a paid script font (Printed Moments).
-Muli is on Google Fonts as **Mulish**. For the paid ones I compared ~20 free fonts
-against the original and picked the closest:
+The original uses Muli, Beaufort Pro Light and a paid script font (Printed Moments).
+Muli is on Google Fonts as **Mulish**. For the two paid fonts I rendered ~40 Google
+Fonts next to the original at the same size and picked the closest:
 
-- **Newsreader** Light for headings: almost the same letter widths as Beaufort Pro.
-  With slightly tighter letter-spacing every heading breaks onto the same lines as
-  the original.
-- **Allison** for the script accent words: a thin, signature-style hand.
+- **Taviraj ExtraLight** for headings: the same thin, low-contrast strokes and the
+  same x-height as Beaufort Pro. Letter-spacing is tightened slightly so every
+  heading breaks onto exactly the same lines as the original (checked at 390,
+  1440 and 1920px).
+- **WindSong** for the script accent words: a thin, slanted, single-line signature
+  script like Printed Moments.
+
+Every other text property (size, weight, line-height, letter-spacing, colour) was
+compared element by element with the original and matches.
 
 The font files live in `src/fonts` and load with `next/font/local`, so the build
 never has to download anything.
