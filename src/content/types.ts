@@ -4,13 +4,30 @@
 // In headings, wrap a word in *asterisks* to show it in the script accent font,
 // e.g. "Who we *help*".
 
-export type Img = { src: string; alt: string };
+// position: optional CSS object-position, to choose which part of the photo stays
+// visible when it is cropped (e.g. "50% 30%" keeps a face in frame).
+export type Img = { src: string; alt: string; position?: string };
 export type Link = { label: string; href: string };
 export type NavItem = Link & { children?: Link[] };
 
 // Two columns of body copy: an uppercase lead line + paragraph on the left,
 // one more paragraph on the right.
 export type TwoColumnCopy = { lead: string; left: string; right: string };
+
+// Part 3: the "Our Office" section, only used by the redesign.
+export type OfficeContent = {
+  eyebrow: string;
+  title: string;
+  text: string;
+  details: { title: string; text: string }[];
+  button: Link;
+  images: [Img, Img, Img];
+};
+
+export type FaqContent = {
+  title: string;
+  items: { question: string; answer: string }[];
+};
 
 export type SiteContent = {
   brand: { name: string; tagline: string };
@@ -66,8 +83,8 @@ export type SiteContent = {
     listTitle: string;
     list: Link[];
     address: string[];
-    email: string;
-    phone: string;
+    email?: string;
+    phone?: string;
     serving: string;
     legal: Link[];
     credit: string;

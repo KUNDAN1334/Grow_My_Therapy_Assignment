@@ -41,6 +41,7 @@ export const cloneContent: SiteContent = {
     sideImage: {
       src: photo("hero-side.webp"),
       alt: "Ocean waves on the shore",
+      position: "87% 56%",
     },
   },
 
@@ -67,6 +68,7 @@ export const cloneContent: SiteContent = {
         image: {
           src: photo("adults.jpg"),
           alt: "Two friends sitting by the water",
+          position: "51% 65%",
         },
       },
       {
@@ -128,6 +130,7 @@ export const cloneContent: SiteContent = {
     image: {
       src: photo("approach.webp"),
       alt: "Mother and daughter dancing on the sand",
+      position: "22% 46%",
     },
   },
 
@@ -181,6 +184,7 @@ export const cloneContent: SiteContent = {
       {
         src: photo("booking-right.jpg"),
         alt: "Child drawing in the sand with a parent",
+        position: "63% 53%",
       },
     ],
   },

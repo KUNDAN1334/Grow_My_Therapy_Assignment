@@ -14,7 +14,7 @@ export function Audiences({ audiences }: { audiences: SiteContent["audiences"] }
         {audiences.items.map((item) => (
           <article key={item.title}>
             <div className="relative aspect-[343/304] md:aspect-auto md:h-[calc(107px+21.46vw)]">
-              <Image src={item.image.src} alt={item.image.alt} fill sizes="(min-width: 768px) 25vw, 88vw" className="object-cover" />
+              <Image src={item.image.src} alt={item.image.alt} style={{ objectPosition: item.image.position }} fill sizes="(min-width: 768px) 25vw, 88vw" className="object-cover" />
             </div>
             <h3 className="text-h4 mt-[46px] md:mt-[calc(23px+1.875vw)]">{item.title}</h3>
             <p className="text-body mt-[30px]">{item.text}</p>

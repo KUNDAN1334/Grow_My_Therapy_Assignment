@@ -44,12 +44,16 @@ export function Footer({ brand, footer }: Props) {
                 {line}
               </span>
             ))}
-            <a href={`mailto:${footer.email}`} className="block break-words hover:opacity-60">
-              {footer.email}
-            </a>
-            <a href={`tel:${footer.phone.replace(/\D/g, "")}`} className="block hover:opacity-60">
-              {footer.phone}
-            </a>
+            {footer.email && (
+              <a href={`mailto:${footer.email}`} className="block break-words hover:opacity-60">
+                {footer.email}
+              </a>
+            )}
+            {footer.phone && (
+              <a href={`tel:${footer.phone.replace(/\D/g, "")}`} className="block hover:opacity-60">
+                {footer.phone}
+              </a>
+            )}
           </address>
           <p className="mt-[19px] italic">{footer.serving}</p>
         </div>

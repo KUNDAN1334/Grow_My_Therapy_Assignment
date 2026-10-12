@@ -21,7 +21,7 @@ export function Intro({ intro }: { intro: SiteContent["intro"] }) {
         </div>
 
         <div className="relative my-[46px] aspect-[343/234] md:col-start-4 md:row-span-2 md:row-start-1 md:my-0 md:aspect-auto md:h-[calc(227px+27.71vw)]">
-          <Image src={image.src} alt={image.alt} fill sizes="(min-width: 768px) 30vw, 88vw" className="object-cover" />
+          <Image src={image.src} alt={image.alt} style={{ objectPosition: image.position }} fill sizes="(min-width: 768px) 30vw, 88vw" className="object-cover" />
         </div>
 
         <p className="text-body md:col-start-2 md:row-start-2 md:mt-[4.3vw]">{copy.right}</p>

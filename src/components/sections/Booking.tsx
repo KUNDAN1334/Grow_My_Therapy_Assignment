@@ -13,7 +13,7 @@ export function Booking({ booking }: { booking: SiteContent["booking"] }) {
       className="bg-surface pt-[55px] pb-14 md:grid md:grid-cols-[11.8vw_1fr_34.5%] md:items-start md:pt-[6.6vw] md:pb-[calc(14px+8.33vw)]"
     >
       <div className="relative aspect-[189/199] w-[48.5vw] md:mt-[calc(36px+5.625vw)] md:aspect-auto md:h-[calc(255px+16.25vw)] md:w-auto">
-        <Image src={leftImage.src} alt={leftImage.alt} fill sizes="(min-width: 768px) 12vw, 49vw" className="object-cover" />
+        <Image src={leftImage.src} alt={leftImage.alt} style={{ objectPosition: leftImage.position }} fill sizes="(min-width: 768px) 12vw, 49vw" className="object-cover" />
       </div>
 
       {/* on desktop this column stretches to the photos' height so the button sits near their bottom edge */}
@@ -34,9 +34,10 @@ export function Booking({ booking }: { booking: SiteContent["booking"] }) {
         <Image
           src={rightImage.src}
           alt={rightImage.alt}
+          style={{ objectPosition: rightImage.position }}
           fill
           sizes="(min-width: 768px) 35vw, 83vw"
-          className="object-cover object-[63%_53%]"
+          className="object-cover"
         />
       </div>
     </section>

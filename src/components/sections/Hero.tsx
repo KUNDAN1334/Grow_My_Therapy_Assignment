@@ -24,16 +24,17 @@ export function Hero({ hero }: { hero: SiteContent["hero"] }) {
         </div>
 
         <div className="relative col-start-1 row-start-2 mt-14 aspect-[278/304] lg:row-start-1 lg:mt-0 lg:aspect-auto lg:h-[calc(219px+25.6vw)]">
-          <Image src={hero.image.src} alt={hero.image.alt} fill priority sizes="(min-width: 1024px) 35vw, 72vw" className="object-cover" />
+          <Image src={hero.image.src} alt={hero.image.alt} style={{ objectPosition: hero.image.position }} fill priority sizes="(min-width: 1024px) 35vw, 72vw" className="object-cover" />
         </div>
 
         <div className="relative col-start-3 row-start-2 aspect-[57/199] self-end lg:row-start-1 lg:aspect-auto lg:h-[calc(159px+16.25vw)]">
           <Image
             src={hero.sideImage.src}
             alt={hero.sideImage.alt}
+            style={{ objectPosition: hero.sideImage.position }}
             fill
             sizes="(min-width: 1024px) 8vw, 15vw"
-            className="object-cover object-[87%_56%]"
+            className="object-cover"
           />
         </div>
       </div>

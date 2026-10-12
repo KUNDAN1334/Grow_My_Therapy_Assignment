@@ -9,7 +9,7 @@ import type { Link } from "@/content/types";
 export function ScriptText({ text }: { text: string }) {
   return text.split(/\*(.+?)\*/).map((part, i) =>
     i % 2 === 1 ? (
-      <span key={i} className="font-script text-accent text-[1.1em] leading-[0] tracking-normal">
+      <span key={i} className="mx-[0.1em] font-script text-accent text-[1.1em] leading-[0] tracking-normal">
         {part}
       </span>
     ) : (
