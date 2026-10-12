@@ -30,9 +30,9 @@ const script = localFont({
   weight: "400",
 });
 
+// Each page sets its own title and description; this is only the fallback.
 export const metadata: Metadata = {
-  title: "Counseling in Newbury Park, CA | Conejo Valley Family Counseling",
-  description: "Homepage clone built with Next.js and Tailwind CSS.",
+  title: "Dr. Maya Reynolds, PsyD | Therapy in Santa Monica, CA",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

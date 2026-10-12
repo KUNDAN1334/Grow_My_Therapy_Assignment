@@ -4,7 +4,7 @@ Built with **Next.js 15 (App Router) + Tailwind CSS v4**.
 
 | Route | What it is |
 |---|---|
-| `/` | Redesign for Dr. Maya Reynolds, PsyD (Santa Monica, CA) — *in progress* |
+| `/` | Redesign for Dr. Maya Reynolds, PsyD (Santa Monica, CA) |
 | `/clone` | Part 1 — clone of [conejovalleycounseling.com/home](https://www.conejovalleycounseling.com/home) |
 
 Git tag `v1-clone` marks the point where only the clone existed.
@@ -20,6 +20,7 @@ src/
   content/
     types.ts          → the shape of all homepage content
     clone.ts          → original site's text and images
+    maya.ts           → Dr. Maya Reynolds' copy, office details and FAQs
   components/
     Header.tsx        → nav + mobile menu
     ui.tsx            → small shared pieces (links, buttons, logo, script text)
@@ -33,6 +34,36 @@ and the theme class change.
 
 In headings, a word wrapped in `*asterisks*` is rendered in the script accent font,
 e.g. `"Who we *help*"`.
+
+## Redesign (Part 2 & 3)
+
+**Theme — "Linen, Sage & Clay"**, taken from Dr. Reynolds' own office photos
+(warm linen and wood, green plants, red brick):
+
+| Role | Colour | Used for |
+|---|---|---|
+| Primary | Evergreen `#2d3a32` | text, dark photo tint |
+| Secondary | Linen `#f2ece3` · Sage mist `#dfe3d6` | section backgrounds |
+| Accent | Clay `#9a5a41` | script words, logo tagline, bottom bar |
+
+Contrast: evergreen on linen 10.1:1, white on clay 5.4:1 (both pass WCAG AA).
+
+**Copy** is written only from her profile (anxiety, panic, trauma, burnout,
+perfectionism; CBT, EMDR, mindfulness, body-oriented work; adults; Santa Monica
+office + telehealth across California). Fees, insurance, phone and email are not
+in the profile, so they are left out rather than invented. The H1, title tag,
+meta description and JSON-LD (`MedicalBusiness` with a Santa Monica address)
+target "anxiety / trauma therapy Santa Monica".
+
+**New sections**
+- *Our Office* (Part 3) — her two office photos plus a detail crop of the
+  armchair by the window, the address, and in-person / telehealth details.
+- *FAQ* — the assignment asks for FAQ copy and the original homepage has none,
+  so it is added as a small accordion (`<details>`, no JavaScript).
+
+**Images** — Dr. Reynolds' portrait and office photos come from her profile.
+The others are from Unsplash, chosen for the same warm, natural-light, coastal
+Santa Monica feel.
 
 ## Fonts
 
